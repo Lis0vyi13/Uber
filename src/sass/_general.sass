@@ -1,0 +1,530 @@
+=button
+    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
+    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
+    border-radius: 4px
+    border: none
+    color: #fff
+    text-transform: uppercase
+    max-width: 100%
+    display: inline-block
+body
+    font-family: 'Roboto', sans-serif
+    font-weight: 400
+    font-size: 18px
+    line-height: 133%
+    color: #fff
+    background: url('../img/mobile_bg.jpg')
+.lock
+    overflow: hidden
+li
+    list-style: none
+
+a
+    text-decoration: none
+    color: #fff
+    transition: all .3s
+    &:hover
+        color: #1FBAD6
+
+ul
+    -webkit-padding-start: 0
+    padding-inline-start: 0
+
+p
+    margin: 0
+    padding: 0
+
+h1
+    font-weight: 900
+    text-transform: uppercase
+
+h2
+    font-weight: 700
+    text-transform: uppercase
+
+h6
+    padding-top: 5px
+    font-weight: 100
+    font-size: 13px
+
+nav
+    background-color: #212121
+    position: fixed
+    top: 0
+    z-index: 2
+    width: 100%
+
+    .burger
+        width: 26px
+        height: 16px
+        position: relative
+        z-index: 1000
+
+        & span
+            height: 2px
+            width: 100%
+            background: #fff
+            transition: all .3s ease
+
+            &::after
+                content: ''
+                height: 2px
+                width: 100%
+                background: #fff
+                position: absolute
+                top: 0
+                transform: rotate(0)
+                transition: all .3s ease
+
+            &::before
+                content: ''
+                height: 2px
+                width: 100%
+                background: #fff
+                position: absolute
+                bottom: 0
+                transform: rotate(0)
+                transition: all .3s ease
+
+        &.active
+            & span
+                transform: rotate(-45deg)
+                height: 1.5px
+                &::after
+                    transform: rotate(90deg)
+                &::before
+                    display: none
+#preloader
+    position: fixed
+    width: 100%
+    height: 100%
+    z-index: 9998
+    background-color: #fff
+    top: 0
+    left: 0
+.lds-ring
+    display: inline-block
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    position: absolute
+    width: 80px
+    height: 80px
+    z-index: 9999
+
+    & div
+        box-sizing: border-box
+        display: block
+        position: absolute
+        width: 64px
+        height: 64px
+        margin: 8px
+        border: 8px solid #000
+        border-radius: 50%
+        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite
+        border-color: #000 transparent transparent transparent
+
+    & div:nth-child(1)
+        animation-delay: -0.45s
+
+    & div:nth-child(2)
+        animation-delay: -0.3s
+
+    & div:nth-child(3)
+        animation-delay: -0.15s
+
+@keyframes lds-ring
+    0%
+        transform: rotate(0deg)
+
+    100%
+        transform: rotate(360deg)
+
+.hidden
+    transition: all .8s ease
+    opacity: 0
+
+.menu-link
+    font-weight: 300
+    line-height: 15px
+    color: #fff
+    &:hover
+        color: #1eacc7
+
+.subheader
+    background: rgba(0, 0, 0, 0.6)
+    position: relative
+    z-index: 1
+    #uber-image
+        max-width: 100%
+    &-container
+        padding: 12px 0 12px 0
+        align-items: center
+    &__callus
+        font-weight: 300
+        font-size: 12px
+        line-height: 117%
+        text-align: right
+        padding-bottom: 5px
+    &__tel
+        text-align: right
+        text-transform: uppercase
+
+.button
+    +button
+    &:hover
+        background: #3a9fb3
+    &:active
+        background: #2a7787
+
+.button-text
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
+
+.uber-partners
+    background: url(../img/uber_bg.jpg) center center / cover no-repeat
+    display: flex
+    margin-top: -84.6px
+    text-align: center
+    &__button
+        +button
+
+        &:hover
+            background: #3a9fb3
+        &:active
+            background: #2a7787
+
+.block-name
+    text-align: center
+    margin-bottom: 33px
+
+    &__text
+        font-size: 11px
+        line-height: 11px
+        display: inline-block
+        padding: 6px 12px
+        background-color: #000
+        text-transform: uppercase
+        &-white
+            background-color: #fff
+            color: #070716
+
+.block-title
+    text-transform: uppercase
+    color: #222222
+    font-weight: 700
+    line-height: 126%
+    text-align: center
+    &-white
+        color: #fff
+
+.block-description
+    padding-top: 5px
+    line-height: 124%
+    text-align: center
+    color: #222222
+    margin-top: -10px
+    &-white
+        color: #fff
+.reasons
+    background: #fff
+    padding: 15px 0 64px 0
+
+    &__card
+        display: flex
+        padding-top: 26px
+        &-circle
+            width: 116px
+            height: 116px
+            background: #1EACC7
+            position: relative
+            border-radius: 50%
+        .reasons__card-img
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        &-text
+            max-width: 347px
+            .reasons__card-title
+                line-height: 124%
+                color: #1EACC7
+
+            .reasons__card-description
+                font-weight: 300
+                line-height: 140%
+                color: #202020
+
+.mobile-app
+    background: url('../img/mobile_bg.jpg')
+    .black-circle
+        width: 29px
+        position: absolute
+        height: 29px
+        border-radius: 50%
+        background-color: #000
+        cursor: pointer
+        bottom: 33px
+        left: 50%
+        transform: translateX(-50%)
+        transition: all .3s ease
+        & svg
+            margin-left: 0.2px
+        &:hover
+            & .mobile-app__card-plus path
+                fill: red
+    &__cards
+        margin-top: 30px
+        display: flex
+        justify-content: center
+        .mobile-app__card
+            position: relative
+            height: 280px
+            overflow: hidden
+            min-width: 100%
+            &:hover .mobile-app__img
+                scale: 1.1
+
+            .mobile-app__img
+                position: absolute
+                width: 100%
+                height: 100%
+                transition: all .3s
+
+            &-text
+                line-height: 129%
+                text-transform: uppercase
+                text-align: center
+                margin-top: 83px
+                padding: 0 15px
+                position: relative
+
+            &-plus
+                position: absolute
+                cursor: pointer
+                z-index: 1
+                bottom: 6px
+                left: 52%
+                transform: translateX(-50%)
+                &:hover path
+                    fill: red
+
+.order
+    position: relative
+    &::after
+        content: ''
+        background: url('../img/choose-bg.jpg') center center / cover no-repeat
+        width: 100%
+        position: absolute
+        top: 0
+        left: 0
+        height: 500px
+        z-index: -1
+
+    &-image
+        display: flex
+        margin-top: 54px
+        justify-content: center
+        & img
+            max-width: 100%
+    &-text
+        font-size: 17px
+        font-weight: 300
+        line-height: 141%
+        text-align: center
+
+.requirements
+    background-color: #fff
+    .conditions
+        margin-top: 35px
+
+    &__rules
+        & > span
+            font-weight: 300
+            line-height: 141%
+            color: #1CA8C3
+
+    &-title
+        line-height: 109%
+        color: #1CA8C3
+        margin-bottom: 20px
+        &-red
+            color: #FF5656
+        & span
+            text-transform: uppercase
+
+    &__list
+        &-block
+            display: flex
+            &:not(:last-child)
+                margin-bottom: 7px
+
+        & img
+            display: flex
+            align-self: flex-start
+
+        &-item
+            padding-left: 10px
+            font-weight: 300
+            line-height: 141%
+            color: #222222
+            position: relative
+.cities
+    background: url('../img/world_bg.png') center no-repeat
+    background-size: cover
+    padding-bottom: 64px
+    &-link
+        display: flex
+        justify-content: center
+        & a
+            display: inline-block
+            font-size: 15px
+            text-align: center
+            text-transform: uppercase
+            color: #1FBAD6
+            transition: all .1s ease
+            position: relative
+            &:hover
+                color: #1c99af
+            &::after
+                content: ''
+                position: absolute
+                bottom: 0
+                left: 0
+                height: 1px
+                width: 0%
+                background-color: #1c99af
+                transition: all .3s linear
+
+            &:hover::after
+                width: 100%
+            &:active
+                color: #2a7787
+footer
+    background-color: #fff
+.footer-line
+    margin: 0 auto
+    max-width: 301px
+    height: 7px
+    background: #1FBAD6
+.footer
+    display: flex
+    justify-content: space-between
+    padding: 32px 23px 40px 23px
+    row-gap: 27px
+
+    & > div:nth-child(2)
+        display: flex
+        align-items: center
+        justify-content: center
+
+    &__social-media
+        display: flex
+        gap: 6px
+
+        &__circle
+            background-color: #000
+            width: 35px
+            height: 35px
+            border-radius: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+            cursor: pointer
+
+            & > a i
+                transition: all .1s ease
+            &:hover:first-child a i
+                color: #4267B2
+            &:hover:nth-child(2) a i
+                color: #1DA1F2
+            &:hover:nth-child(3) a i
+                color: #0077b5
+            &:hover:last-child a i
+                color: #bc1888
+    &__links
+        text-align: center
+        display: flex
+        flex-direction: column
+
+        &-first-column
+            display: flex
+            text-align: center
+            flex-wrap: wrap
+            justify-content: center
+            align-items: center
+
+            & a
+                text-transform: uppercase
+                font-weight: 300
+                color: #070716
+                transition: all .3s ease
+                position: relative
+                &::after
+                    content: ''
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    width: 0%
+                    height: 1px
+                    background-color: #1FBAD6
+                    transition: all .3s ease
+                &:hover::after
+                    width: 100%
+
+        &-second-column
+            display: flex
+            text-align: center
+            flex-wrap: wrap
+            justify-content: center
+            align-items: center
+            & a
+                text-transform: uppercase
+                font-weight: 300
+                font-size: 11px
+                color: #999999
+                position: relative
+
+                &::after
+                    content: ''
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    width: 0%
+                    height: 1px
+                    background-color: #1FBAD6
+                    transition: all .3s ease
+                &:hover::after
+                    width: 100%
+        .language a
+            font-size: 11px
+            text-transform: uppercase
+            color: #1FBAD6
+            display: inline-block
+            text-align: center
+            transition: all .1s ease
+            position: relative
+            &:hover
+                color: #1c99af
+            &::after
+                content: ''
+                position: absolute
+                bottom: 0
+                left: 0
+                height: 1px
+                width: 0%
+                background-color: #1c99af
+                transition: all .3s linear
+            &:hover::after
+                width: 100%
+            &:active
+                color: #2a7787
+
+    &__app-stores a img
+        width: 100px
+        height: 27px
+        transition: all .2s ease
+        &:hover
+            scale: 1.05
+            &:last-child
+                width: 96px
+                height: 27px
